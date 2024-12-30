@@ -1,0 +1,120 @@
+/* Estilo para o corpo da página */
+body {
+    background-color:#212A7B ;
+    margin: 0;  /* Remove a margem padrão */
+    font-family: 'Roboto', sans-serif;  /* Define a fonte do corpo */
+}
+
+/* Seção de introdução */
+.banner{
+    position: relative;
+    background: url('/img/login.jpg') no-repeat center center;
+    background-size: cover; /* A imagem vai cobrir toda a tela */
+    height: 100vh; /* A altura será sempre 100% da altura da tela do navegador */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    overflow: hidden; /* Para garantir que nada vaze da área visível */
+    
+}
+.login{
+  width: 2.5rem;
+  height: 2.5rem;
+  
+}
+.textosBanner{
+    text-shadow: 0 0 3px black;
+  }
+  
+  main .textosBanner h1{
+      color: white;
+      font-size: 45px;
+      margin-left: 10%;
+  }
+  main .textosBanner p{
+      color: white;
+      font-size: 29px;
+      margin-left:10%;
+  }
+  
+  form {
+      width: 32%;
+      background-color: white;
+      padding: 40px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.627);
+  }
+  
+  form h1 {
+      color: black;
+      font-size: 35px;
+      margin-bottom: 20px;
+  
+  }
+  form p{
+      margin-top: 10px;
+      font-weight: lighter;
+      font-size: 20px;
+  
+  }
+  
+  .inputinit{
+      border-color: #e9e9e9d6;
+      border: 1px solid rgba(0, 0, 0, 0.534);
+      padding: 22px;
+      width: 97.5%;
+      height: 30px;
+      border-width: 1.5px;
+  
+  }
+  
+  .preencher {
+      position: absolute;
+      margin-left: 20px;
+      margin-top: -10px;
+      background-color: #ffffff;
+      color: black;
+      padding: 0 10px;
+  }
+  label {
+      margin-top: 10px;
+      display: block;
+      
+      /* Garante que a label ocupe uma linha inteira */
+  }
+  .espaco{
+    margin-bottom: 20px;
+}
+
+#enviardados{
+    border-color: #2E3686;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: #212A7B;
+    
+}
+#enviardados:hover{
+    background: #2E3686;
+    transition: 0.250ms;
+    cursor: pointer;
+    color: #f7f7f7;
+}
+
+#enviardados a{
+    text-decoration: none; 
+    padding: 20px 40px;  
+}
+
+#enviardados a:hover{
+    color: #fefeff;
+   
+}
+
+.login{
+    width: 2.2em;
+    height: 2.1em;
+    vertical-align: -0.125em;
+    color: #f1db15;
+}

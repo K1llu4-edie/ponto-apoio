@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponto de Apoio | Doação</title>
+  <!-- Carregando os arquivos estáticos -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/doacao.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styleheader.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="Logo Ponto de Apoio">
+        </div>
+        <div class="botoes">
+          <button class="bnt-1"><a href="{% url 'index' %}">Home</a></button>
+              <button class="bnt-1"><a href="{% url 'contato' %}">Contato</a></button>
+              <button id="faca"><a href="{% url 'doar' %}">Faça uma doação</a></button>
+              <button id="receba"><a href="{% url 'receba' %}">Receba uma doação</a></button>
+          <a href="{% url 'login' %}"><img class="login" src="{% static 'img/icone sem fundo.png' %}" alt=""></a>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="banner">
+      <div class="textosBanner">
+        <h1>Você pode fazer a diferença na vida de uma família!</h1>
+        <p>O Ponto de Apoio está pronto para receber a sua doação. Cadastre-se e agende a retirada dos itens na sua casa. Sua contribuição pode transformar vidas!</p>
+      </div>
+
+      <form method="POST">
+        {% csrf_token %}
+        <h1>Estamos felizes que você esteja aqui para ajudar!
+          <p>Suas informações de contato são essenciais para que possamos garantir que a doação chegue em quem precisa.</p>
+        </h1>
+
+        <label for="nome" class="preencher">Nome</label>
+        <input type="text" name="nome" id="nome" class="espaco inputinit" required>
+
+        <label for="email" class="preencher">E-mail</label>
+        <input type="email" name="email" id="email" class="espaco inputinit" required>
+
+        <label for="telefone" class="preencher">Telefone ou WhatsApp</label>
+        <input type="text" name="telefone" id="telefone" class="espaco inputinit" required>
+
+        <label for="cidade_bairro" class="preencher">Cidade e Bairro</label>
+        <input type="text" name="cidade_bairro" id="cidade_bairro" class="espaco inputinit" required>
+
+        <h3>O que você pode doar?</h3>
+
+        <div class="checkbox">
+          <input type="checkbox" name="itens" id="NP" value="Itens não perecíveis">
+          <label for="NP">Itens não perecíveis</label>
+
+          <input type="checkbox" name="itens" id="CB" value="Cama e Banho">
+          <label for="CB">Cama e Banho</label>
+
+          <input type="checkbox" name="itens" id="MH" value="Materiais de Higiene">
+          <label for="MH">Materiais de Higiene</label>
+
+          <input type="checkbox" name="itens" id="Roupas" value="Roupas">
+          <label for="Roupas">Roupas</label>
+
+          <input type="checkbox" name="itens" id="BRI" value="Brinquedos">
+          <label for="BRI">Brinquedos</label>
+
+          <input type="checkbox" name="itens" id="CAL" value="Calçados">
+          <label for="CAL">Calçados</label>
+        </div>
+
+        <div class="enviar">
+          <button id="enviardados" type="submit">ENVIAR MEUS DADOS</button>
+          <p class="termos">Li e concordo com a <span>política de privacidade</span></p>
+        </div>
+      </form>
+    </div>
+
+    <summary class="suma1">
+        <div class="title">
+          <h1>NOSSO PASSO A PASSO</h1>
+        </div>
+
+        <div class="caixas">
+          <div class="caixinha1">
+          <h4>Separe os itens para doação </h4>
+            <p>Separe as roupas, calçados, acessórios, Brinquedos, e outros itens que estão em bom estado.</p>
+        </div>
+        <svg  xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+        <div class="caixinha1">
+          <h4>Preencha seus dados</h4>
+            <p>Informe seu nome, telefone, e bairro. Isso nos ajudará a entrar em contato e agilizar o processo de doação</p>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg>
+
+          <div class="caixinha1">
+          <h4>Ajudaremos a encontrar uma família </h4>
+            <p>Nossa equipe buscara uma família que precise dos itens que você esta doando, garantindo que sua generosidade chegue a quem precisa.</p>
+
+        </div>
+        </div>
+  </summary>
+
+ <summary class="suma2">
+    <h1>TRÊS MANEIRAS DE FAZER A DIFERENÇA ATRAVÉS DA SUA DOAÇÃO</h1>
+
+    <div class="serv">
+    <div class="caixa1">
+    <h4>01</h4>
+    <p>O que não serve para você, pode ajudar alguém a recomeçar.</p>
+    </div>
+
+
+    <div class="caixa1">
+    <h4>02</h4>
+    <p>Libere espaço e faça sentido do que você tem.</p>
+    </div>
+
+    <div class="caixa1">
+    <h4>03</h4>
+    <p>Cada doação é uma oportunidade de renovação para quem recebe.</p>
+    </div>
+    </div>
+
+</summary>
+  </main>
+
+  <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ponto de Apoio. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+  </footer>
+
+    <script>
+  var EnviarAlert = document.getElementById("enviardados")
+
+  EnviarAlert.onclick = function(){
+    alert("Obrigado pela sua doação")
+  }
+
+    </script>
+</body>
+</html>

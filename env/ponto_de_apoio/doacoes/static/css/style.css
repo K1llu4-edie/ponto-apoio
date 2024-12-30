@@ -1,0 +1,179 @@
+/* Estilo para o corpo */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #212A7B;
+}
+
+
+/* Ajustes no container principal para garantir espaço adequado para os textos */
+.cor {
+    background: linear-gradient(to right, #D36D40, #F77169);
+    border-radius: 0 0 15% 15%;
+}
+
+/* Seção sobre */
+.sobre {
+    padding: 40px 20px;
+    width: 1280px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites da seção */
+}
+
+/* Ajuste para títulos e textos dentro das seções */
+.sobre h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 20px; /* Ajustando o tamanho do texto */
+    line-height: 1.6; /* Melhorando o espaçamento entre as linhas */
+    max-width: 900px; /* Para evitar que os textos fiquem muito largos */
+    margin: 0 auto; /* Centraliza o texto */
+}
+
+/* Missão */
+.missao {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 1280px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte, se necessário */
+    gap: 20px;
+}
+
+.missao .info {
+    flex: 1;
+    margin: 0 10px;
+    max-width: 400px; /* Limita a largura das colunas */
+    overflow: hidden; /* Impede que o texto ultrapasse o limite */
+}
+
+.missao .info h3 {
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.missao .info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Visão geral */
+.visao {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    color: #0f1e9e;
+    text-align: center;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.visao .visor {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.visao .visor h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.visao .visor p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Ajustes na barra de rolagem de carrossel */
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 600px; /* Altura razoável para o carrossel */
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.imgcarr {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgcbanner {
+    width: 100%;
+}
+
+/* Estilos para os botões de navegação do carrossel */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%; /* Botões redondos */
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Efeito de hover mais escuro */
+}
+
+/* Responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .visao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carrossel-container {
+        height: 40vh;
+    }
+
+    .sobre h2 {
+        font-size: 40px;
+    }
+
+    .info h3 {
+        font-size: 30px;
+    }
+
+    .missao .info {
+        flex: 1 1 100%; /* Faz com que as colunas ocupem toda a largura disponível */
+        max-width: 100%; /* Permite que as seções da missão ocupem toda a tela em telas pequenas */
+    }
+
+    .visao .visor h2 {
+        font-size: 2.5em;
+    }
+}

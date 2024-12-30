@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva, ajustando a largura conforme o dispositivo -->
+  <title>Ponto de Apoio | Contato</title> <!-- Define o título da página que aparece na aba do navegador -->
+  <link rel="stylesheet" href="{% static 'css/styleheader.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contato.css' %}"/> <!-- Link para o arquivo CSS externo, que contém os estilos da página -->
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+        </div>
+        <div class="botoes">
+          <button class="bnt-1"><a href="{% url 'index' %}">Home</a></button>
+              <button class="bnt-1"><a href="{% url 'contato' %}">Contato</a></button>
+              <button id="faca"><a href="{% url 'doar' %}">Faça uma doação</a></button>
+              <button id="receba"><a href="{% url 'receba' %}">Receba uma doação</a></button>
+              <a href="{% url 'login' %}"><svg class="login" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M399 384.2C376.9 345.8 335.4 320 288 320l-62 0c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg></a>
+        </div>
+    </nav>
+</header>
+<main>
+
+  <!-- Seção principal da página para introdução e contato -->
+  <div class="banner">
+    <!-- Informações de contato -->
+    <div class="textosBanner">
+      <h1>Entre em Contato Conosco</h1> <!-- Título da seção de contato -->
+      <p>fundacaoponto.deapoio@gmail.com</p> <!-- Endereço de e-mail para contato -->
+      <p>(11) 1234-1234 (Whatsapp)</p> <!-- Número de telefone para contato -->
+    </div>
+    <form action="receberdados">
+      <h1>Tem alguma dúvida ou sugestão?
+        <p>Estamos aqui para ajudar! Preencha o formulário abaixo e entraremos em contato o mais rápido possível. Sua opinião é muito importante para nós!</p>
+      </h1>
+
+      <label for="nome" class="preencher">Nome</label>
+      <input type="text" class="espaco inputinit">
+      <label for="email" class="preencher">E-mail</label>
+      <input type="email" class="espaco inputinit">
+      <label for="email" class="preencher">digite sua mensagem</label>
+      <textarea class="espaco inputinit" name="mensagem" ></textarea> <!-- Campo de entrada para mensagem -->
+      <<button id="enviardados">ENVIAR MENSAGEM</button> <!-- Botão para enviar o formulário -->
+      </form>
+    </div>
+     <!-- Seção que explica o processo da organização -->
+  <section class="process">
+    <h2>NOSSO PROCESSO</h2> <!-- Título da seção de processo -->
+    <div class="steps">
+      <!-- Etapas do processo -->
+      <div class="step1">
+        <!-- Imagem representando a etapa de coleta -->
+        <p>Coleta</p> <!-- Descrição da etapa de coleta -->
+      </div>
+      <div class="step2">
+        <!-- Imagem representando a etapa de separação -->
+        <p>Separação</p> <!-- Descrição da etapa de separação -->
+      </div>
+      <div class="step3">
+      <!-- Imagem representando a etapa de distribuição -->
+        <p>Distribuição</p> <!-- Descrição da etapa de distribuição -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de visita com informações sobre como visitar o projeto -->
+  <section class="visit">
+    <div class="visit-container">
+      <!-- Informações de visita -->
+      <div class="visit-info">
+        <h2>Venha nos visitar</h2> <!-- Título da seção de visita -->
+        <p>Entre em contato para agendarmos sua visita aqui na sede, para você conhecer de perto esse projeto que pode ajudar várias pessoas.</p> <!-- Descrição sobre a visitação -->
+        <p>Av. Visc. de Suassuna, 500 - Santo Amaro, Recife - PE, 50050-540<br>De Segunda à Sexta das 08h às 22h</p> <!-- Endereço e horário de funcionamento -->
+      </div>
+      
+      <!-- Mapa -->
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15801.441150533123!2d-34.895518853614234!3d-8.06468399281591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18ec21624181%3A0xef3df567e17e3837!2sSenac%20Recife%20(sede)!5e0!3m2!1spt-BR!2sbr!4v1731369397873!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+  <!-- Seção do rodapé da página -->
+  <footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Ponto de Apoio. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+</footer>
+  <script>
+    var EnviarAlert = document.getElementById("enviardados")
+
+  EnviarAlert.onclick = function(){
+  alert("Obrigado pela sua doação")
+}
+  </script>
+</body>
+</html>
+
+<!-- <h2>Tem alguma dúvida ou sugestão?</h2> 
+<p>Estamos aqui para ajudar! Preencha o formulário abaixo e entraremos em contato o mais rápido possível. Sua opinião é muito importante para nós!</p> 
+<form action="" method="get"> -->   

@@ -1,0 +1,203 @@
+/* Estilo para o corpo da página */
+body {
+    background-color:#212A7B ;
+    margin: 0;  /* Remove a margem padrão */
+    font-family: 'Roboto', sans-serif;  /* Define a fonte do corpo */
+}
+
+/* Seção de introdução */
+.banner{
+    position: relative;
+    background: url('../img/group 12.png');
+    background-size: cover; /* A imagem vai cobrir toda a tela */
+    height: 100vh; /* A altura será sempre 100% da altura da tela do navegador */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    overflow: hidden; /* Para garantir que nada vaze da área visível */
+    
+}
+
+.textosBanner{
+    text-shadow: 0 0 3px black;
+  }
+  
+  main .textosBanner h1{
+      color: white;
+      font-size: 45px;
+      margin-left: 10%;
+  }
+  main .textosBanner p{
+      color: white;
+      font-size: 29px;
+      margin-left:10%;
+  }
+  
+  form {
+      width: 32%;
+      background-color: white;
+      padding: 40px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.627);
+  }
+  
+  form h1 {
+      color: black;
+      font-size: 35px;
+      margin-bottom: 20px;
+  
+  }
+  form p{
+      margin-top: 10px;
+      font-weight: lighter;
+      font-size: 20px;
+  
+  }
+  
+  .inputinit{
+      border-color: #e9e9e9d6;
+      border: 1px solid rgba(0, 0, 0, 0.534);
+      padding: 22px;
+      width: 97.5%;
+      height: 30px;
+      border-width: 1.5px;
+  
+  }
+  
+  .preencher {
+      position: absolute;
+      margin-left: 20px;
+      margin-top: -10px;
+      background-color: #ffffff;
+      color: black;
+      padding: 0 10px;
+  }
+  label {
+      margin-top: 10px;
+      display: block;
+      
+      /* Garante que a label ocupe uma linha inteira */
+  }
+  .espaco{
+    margin-bottom: 20px;
+}
+#enviardados{
+    border-color: #2E3686;
+    background-color: #fff;
+    color: #2E3686;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+#enviardados:hover{
+    background: #2E3686;
+    color: white;
+    transition: 0.250ms;
+    cursor: pointer;
+}
+/* Seção de processo */
+.process {
+    background-image: linear-gradient( to right, #d36d40, #f77169);  /* Define o fundo da seção como uma cor laranja */
+    padding: 50px 0;  /* Adiciona padding superior e inferior */
+    text-align: center;  /* Centraliza o texto */
+    color: #fff;  /* Define a cor do texto como branco */
+}
+.process h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+/* Estilos para os passos dentro da seção de processo */
+.process .steps {
+    display: flex;  /* Usa flexbox para alinhar os passos */
+    justify-content: center;  /* Centraliza os itens horizontalmente */
+    gap: 20px;  /* Adiciona espaço entre os itens */
+}
+
+/* Estilos para cada passo na seção de processo */
+.process .step1 {
+    background-image: url('../img/doação.png');
+    color: #ffffff;  /* Define a cor do texto como preto */
+    padding: 20px;  /* Adiciona padding dentro de cada passo */
+    height: 300px;
+    border-radius: 5px;  /* Arredonda os cantos dos passos */
+    width: 300px;  /* Define a largura de cada passo */
+    text-align: center;  /* Centraliza o texto dentro do passo */
+    cursor: default;  /* Garante que o cursor não mude para pointer */
+    background-size: cover;
+}
+.process .step2 {
+    background-image: url('../img/separaçao.png');
+    color: #f6f4f4;  /* Define a cor do texto como preto */
+    padding: 20px;  /* Adiciona padding dentro de cada passo */
+    border-radius: 5px;  /* Arredonda os cantos dos passos */
+    width: 300px;  /* Define a largura de cada passo */
+    text-align: center;  /* Centraliza o texto dentro do passo */
+    cursor: default;  /* Garante que o cursor não mude para pointer */
+    background-size: cover;
+    height: 300px;
+}
+
+.process .step3 {
+    background-image: url('../img/distribuiçao.png');
+    color: #fcfbfb;  /* Define a cor do texto como preto */
+    padding: 20px;  /* Adiciona padding dentro de cada passo */
+    border-radius: 5px;  /* Arredonda os cantos dos passos */
+    width: 300px;  /* Define a largura de cada passo */
+    text-align: center;  /* Centraliza o texto dentro do passo */
+    cursor: default;  /* Garante que o cursor não mude para pointer */
+    background-size: cover;
+    height: 300px;
+    
+}
+.step3 p
+{
+    background-color: rgba(0, 0, 0, 0.226);
+    margin-top: 80%;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+.step2 p
+{
+    background-color: rgba(0, 0, 0, 0.322);
+    margin-top: 80%;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+.step1 p
+{
+    background-color: rgba(0, 0, 0, 0.226);
+    margin-top: 80%;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+/* Seção de visita */
+.visit {
+    background-image: linear-gradient( to right, #d36d40, #f77169);  /* Define o fundo da seção de visita como laranja */
+    padding: 50px 0;  /* Adiciona padding superior e inferior */
+    text-align: center;  /* Centraliza o texto */
+    color: #fff;  /* Define a cor do texto como branco */
+    align-items: center;
+    border-radius: 0 0 30% 30%;
+}
+
+/* Container para alinhar as seções dentro da seção de visita */
+.visit-container {
+    display: flex;  /* Usa flexbox para alinhar os itens lado a lado */
+    justify-content: center;  /* Centraliza os itens horizontalmente */
+    gap: 50px;  /* Adiciona espaço entre os itens */
+    align-items: center;
+}
+
+/* Estilos para a informação na seção de visita */
+.visit-info {
+    text-align: left;  /* Alinha o texto à esquerda */
+    max-width: 500px;  /* Define um limite para a largura */
+}
+
+/* Estilos para o mapa na seção de visita */
+.map iframe {
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(69, 69, 69, 0.59);
+}
+
+

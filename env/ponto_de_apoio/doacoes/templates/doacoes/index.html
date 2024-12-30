@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto de Apoio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleheader.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+            </div>
+            <div class="botoes">
+                <button class="bnt-1"><a href="{% url 'index' %}">Home</a></button>
+              <button class="bnt-1"><a href="{% url 'contato' %}">Contato</a></button>
+              <button id="faca"><a href="{% url 'doar' %}">Faça uma doação</a></button>
+              <button id="receba"><a href="{% url 'receba' %}">Receba uma doação</a></button>
+                <a href="#"><svg class="login" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M399 384.2C376.9 345.8 335.4 320 288 320l-62 0c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg></a>
+            </div>
+        </nav>
+    </header>
+    <div class="carrossel-container">
+        <div class="carrossel">
+            <div class="slide">
+                <img class="imgcarr" src="{% static 'img/maocoracacao.jpg' %}" alt="Imagem 1">
+            </div>
+            <div class="slide">
+                <img class="imgcarr" src="{% static 'img/sacola.jpg' %}" alt="Imagem 2">
+            </div>
+            <div class="slide">
+                <img class="imgcarr" src="{% static 'img/lindas-mulherejpg.jpg' %}" alt="Imagem 3">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <main>
+        <div class="cor">
+            <section class="visao">
+                <div class="visor">
+                    <h2>+2K</h2>
+                    <p>Estimativas de doações em dois anos seria ajudar Mais de 2.000 famílias</p>
+                </div>
+                <div class="visor">
+                    <h2>25</h2>
+                    <p>Voluntários trabalhando ativamente <br> em nossos projetos</p>
+                </div>
+                <div class="visor">
+                    <h2>+6</h2>
+                    <p>Comunidades beneficiadas <br> em diversas áreas</p>
+                </div>
+            </section>
+
+            <div class="banner2">
+                <img class="imgcbanner" src="{% static 'img/banner2.jfif' %}" alt="banner2">
+            </div>
+
+            <section class="sobre">
+                <h2>QUEM SOMOS?</h2><br>
+                <p>Movidos pela empatia de que a solidariedade é um dos maiores motores de transformação, decidimos criar uma fundação que
+                unisse esforços da sociedade para aliviar o sofrimento de quem mais precisa. Com idades entre 18 a 29 anos, não somos uma geração apenas conectada às redes sociais e ao universo digital, mas também
+                entendemos que o futuro começa agora, nas pequenas e grandes ações de cada um. Entendemos que, embora jovens, temos
+                muito a oferecer à comunidade. Com energia, criatividade e um forte senso de responsabilidade social, começamos a
+                mobilizar amigos, familiares e parceiros para a arrecadação de roupas e alimentos, itens essenciais para muitas pessoas
+                em situação de vulnerabilidade.</p>
+            </section>
+            <section class="missao">
+                <div class="info">
+                    <h3>MISSÃO</h3>
+                    <p>Nossa fundação tem como missão transformar vidas por meio da solidariedade e do apoio mútuo. Com foco em proporcionar a indivíduos e comunidades em situação de vulnerabilidade as condições necessárias para um futuro mais digno e promissor</p>
+                </div>
+                <div class="info">
+                    <h3>VISÃO</h3>
+                    <p>A visão da nossa fundação é ser um agente transformador na construção de uma sociedade mais justa e solidária, onde todas as pessoas, independentemente de sua origem ou condição social, tenham acesso a oportunidades de desenvolvimento e bem-estar. Buscamos promover ações sociais que impactem positivamente a vida de comunidades carentes, fortalecendo valores de solidariedade, inclusão e equidade, e criando um futuro mais digno e sustentável para todos</p>
+                </div>
+                <div class="info">
+                    <h3>VALORES</h3>
+                    <p>Acreditamos que a união de esforços pode gerar mudanças significativas e duradouras. Por isso, convidamos você a se unir a nós nessa causa, contribuindo com doações que ajudarão a promover melhorias concretas na vida de milhares de pessoas.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Ponto de Apoio. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) currentIndex = 0;
+            if (index < 0) currentIndex = slides.length - 1;
+
+            slides.forEach((slide, i) => {
+                slide.style.display = i === currentIndex ? 'block' : 'none';
+            });
+        }
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #212A7B;
+    font-family: "Inter", sans-serif;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('../img/background2.png');
+    background-size: cover;
+    background-position: center;
+    height: 950px;
+}
+
+.textosBanner{
+  padding-right: 10%;
+  text-shadow: 0 0 3px black;
+}
+
+main .textosBanner h1{
+    color: white;
+    font-size: 45px;
+    margin-left: 10%;
+}
+main .textosBanner p{
+    color: white;
+    font-size: 40px;
+    margin-left:10%;
+}
+
+form {
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    margin-right: 10%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.627);
+}
+
+form h1 {
+    color: black;
+    font-size: 35px;
+    margin-bottom: 20px;
+
+}
+form p{
+    margin-top: 10px;
+    font-weight: lighter;
+    font-size: 20px;
+
+}
+
+.inputinit{
+    border-color: #e9e9e9d6;
+    border: 1px solid rgba(0, 0, 0, 0.534);
+    padding: 18px;
+    width: 97.5%;
+    height: 30px;
+    border-width: 1.5px;
+
+}
+
+.preencher {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -10px;
+    background-color: #ffffff;
+    padding: 0 10px;
+}
+label {
+    margin-top: 10px;
+    display: block;
+    
+    /* Garante que a label ocupe uma linha inteira */
+}
+.checkbox label {
+    margin-top: 5px;
+    display: block;
+    /* Garante que a label ocupe uma linha inteira */
+}
+.espaco{
+    margin-bottom: 20px;
+}
+.checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.checkbox label {
+    display: flex;
+    align-items: center;
+    color: #999;
+}
+
+.checkbox input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Estilo para o label */
+.checkbox label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+/* Caixa customizada para a checkbox */
+.checkbox label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #2E3686;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Estilo da caixa quando marcada (estado "checked") */
+.checkbox input[type="checkbox"]:checked+label::before {
+    background-color: #2E3686;
+    border-color: #2E3686;
+}
+
+/* Estilo para o "check" dentro da caixa */
+.checkbox input[type="checkbox"]:checked+label::after {
+    content: "✔";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    font-size: 16px;
+    color: white;
+}
+
+/* Alteração da aparência do label quando está no estado hover */
+.checkbox label:hover::before {
+    border-color: #F7CF69;
+}
+
+.enviar{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding-right: 55px;
+    padding: 10px;
+}
+
+#enviardados{
+    border-color: #2E3686;
+    background-color: #fff;
+    color: #2E3686;
+    border-radius: 3px;
+    padding: 20px 40px;
+}
+#enviardados:hover{
+    background: #2E3686;
+    color: white;
+    transition: 0.250ms;
+    cursor: pointer;
+}
+
+.termos{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.termos span{
+    color: #2E3686;
+    text-decoration: underline;
+}
+
+.termos span:hover{
+   color: #020736; 
+   font-size: 15.1px;
+   cursor: pointer;
+
+}
+
+.receberdados h3{
+    color: #999;
+}
+
+
+ #receberdados{
+    border: #2E3686;
+    border-color: #2E3686;
+    
+ }
+
+ .suma1{
+  display: flex;
+  height: 45vh;
+  flex-direction: column;
+  background-image: linear-gradient( to right, #d36d40, #f77169);
+  
+ }
+.seta{
+  font-size: 5em;
+  color: #fff;
+}
+.title{
+  text-align: center;
+  padding: 2%;
+  color: white;
+  font-size: large;
+}
+.caixas{
+ display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  cursor: auto;
+}
+
+.caixinha1{
+  width: 15%; 
+  height: 90%; 
+  background: #212a7b;
+  color: whitesmoke;
+  text-align: center;
+  align-content: center;
+  border-radius: 45px;
+  cursor: auto;
+  padding: 10px;
+}
+
+.caixinha1:hover{
+  opacity: 0.85;
+}
+.caixinha1 > h4{
+  font-weight: bolder;
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+.caixinha1 > p{
+  font-weight: 150;
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+
+svg{
+ margin-top: 120px;
+ color: white;
+}
+
+.suma2{
+    background-image: linear-gradient( to right, #d36d40, #f77169);
+    font-size: 16px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    color: white;
+    border-radius: 0 0 30% 30%;
+}
+
+.serv{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    padding: 20px 0;
+    gap: 5%;
+    padding-top: 2.5%;
+    justify-content: center;
+    
+   
+}
+
+.serv h4{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    
+    width: 70px;
+    height: 70px;
+   
+    margin: 0 auto;
+    font-size: 2em;
+    padding-top: 9px;
+   
+}
+
+.caixa1 {
+    width: 15vw;
+    text-align: center;
+    font-size: 20px;
+}
+
+.caixa1 p{
+    padding-top: 20px;
+    font-weight: normal;
+    font-size: 35px;
+}
+

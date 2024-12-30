@@ -1,0 +1,156 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte do site 
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #F2F2F2; 
+    color: #333; 
+}*/
+
+/* Cabeçalho */
+header {
+    background-color: #F1F1F1;
+    padding: 15px 0;
+}
+.login{
+  width: 2.5rem;
+  height: 2.5rem;
+  
+}
+nav {
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+nav .botoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    gap: 20px;
+}
+
+nav .botoes button {
+    background-color: #2E3686;
+    border-radius: 25px;
+    color: white;
+    padding: 12px;
+    width: 170px;
+    cursor: pointer;
+    opacity: 0.9;
+    border: none;
+    
+}
+
+.botoes a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.bnt-1{
+    border: 1px solid #0000004c;
+    position: relative;
+    overflow: hidden;
+}
+.bnt-1:hover{
+    opacity: 1;
+    transition: 220ms;
+    opacity: 1;
+    box-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 40px black;
+}
+.elemento::before {
+    content: "";
+    display: block;
+    width: 100px;  /* Tamanho da imagem */
+    height: 100px;
+    background-image: url('logo.png');
+    background-size: contain; /* Faz a imagem se ajustar ao tamanho do container */
+    background-repeat: no-repeat; /* Impede repetição da imagem */
+}
+
+#faca {
+    background: linear-gradient(to right, #EAAF5F, #F7CF69);
+    position: relative;
+    overflow: hidden;
+}
+#faca:hover{
+    background: linear-gradient(to left, #EAAF5F, #F7CF69);
+    transition: 220ms;
+    opacity: 1;
+    box-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 40px black;
+}
+#receba {
+    background: linear-gradient(to right, #D56D42, #F8716A);
+    position: relative;
+    overflow: hidden;
+}
+#receba:hover{
+    background: linear-gradient(to left, #D56D42, #F8716A);
+    transition: 220ms;
+    opacity: 1;
+    box-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 40px black;
+}
+
+/* Container de conteúdo principal 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: linear-gradient(to top, #8A2BE2, #FF4500);
+    color: #FFF;
+}*/
+
+.contact-info {
+    max-width: 50%;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+/* Rodapé */
+footer {
+    background-color: #212A7B;
+    color: white;
+    padding: 33px ;
+    text-align: center;
+}
+
+footer .footer-content p {
+    font-size: 14px;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer .social-links a:hover {
+    color: #EAAF5F;
+}
