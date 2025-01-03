@@ -55,7 +55,7 @@ git clone https://github.com/lucascris203/Ponto-de-Apoio.git
 ### 2. Instruções para Configuração e Execução do Projeto
 
 ```bash
-cd Ponto-de-Apoio-main
+cd Ponto-de-Apoio
 python -m env  # Para criar o ambiente virtual
 
 cd env\Scripts\activate #Ativar o ambiente virtual
